@@ -541,3 +541,17 @@ footer .socials a:hover .fa-github {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 450px) {
+  .h1-bg {
+    top: -100px;
+  }
+
+  .index-wrapper {
+    height: calc(100vh - 450px);
+  }
+
+  .index-body {
+    height: 150px;
+  }
+}
