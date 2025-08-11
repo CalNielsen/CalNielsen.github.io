@@ -30,8 +30,11 @@ main {
   margin-top: 107px;
 }
 
+b {
+  background-color: #142620;
+}
+
 @media (max-width: 991px) {
-  /* 992 * 0.75 */
   main {
     margin-top: 200px;
   }
@@ -191,8 +194,13 @@ h1 {
   background-color: #142620;
 }
 
-.text-side p b {
-  background-color: #142620;
+.text-side p {
+  display: block;
+}
+
+/* Show all paragraphs when expanded */
+.text-side.expanded p {
+  display: block;
 }
 
 .image-side {
@@ -553,5 +561,17 @@ footer .socials a:hover .fa-github {
 
   .index-body {
     height: 150px;
+  }
+}
+
+/* Very Important to allowing read More buttons to work on mobile */
+@media (max-width: 1300px) {
+  /* Hide all paragraphs except the first */
+  .text-side p:not(:first-child) {
+    display: none !important;
+  }
+  /* When expanded, show all paragraphs */
+  .text-side.expanded p {
+    display: block !important;
   }
 }

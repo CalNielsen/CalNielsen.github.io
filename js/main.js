@@ -69,54 +69,53 @@ function setupStickyHeader() {
 // =============================================
 // Read More Button for Collapsing Text (Mobile)
 // =============================================
+let expanded = false;
+
 function setupReadMoreToggle() {
   const textSide = document.getElementById("project-text");
-  if (!textSide) return; // Exit if no target element
+  if (!textSide) return;
 
-  const paragraphs = textSide.querySelectorAll("p");
-  if (paragraphs.length <= 1) return; // No need if 1 or fewer paragraphs
-
-  let button = textSide.querySelector(".read-more-btn"); // Reuse if already added
+  let button = textSide.querySelector(".read-more-btn");
 
   function updateVisibility() {
-    if (window.innerWidth < 1300) {
-      // Small screen: Hide paragraphs 2+
-      for (let i = 1; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-      }
+    const isMobile = window.innerWidth < 1300;
 
+    if (isMobile) {
       if (!button) {
         button = document.createElement("button");
-        button.textContent = "Read More";
         button.className = "btn btn-warning mt-3 read-more-btn";
         textSide.appendChild(button);
 
-        let expanded = false;
-
         button.addEventListener("click", () => {
           expanded = !expanded;
-          for (let i = 1; i < paragraphs.length; i++) {
-            paragraphs[i].style.display = expanded ? "block" : "none";
-          }
+          textSide.classList.toggle("expanded", expanded);
           button.textContent = expanded ? "Show Less" : "Read More";
         });
       }
 
-      button.style.display = "inline-block";
+      // Only apply .expanded class if expanded is true
+      if (expanded) {
+        textSide.classList.add("expanded");
+      } else {
+        textSide.classList.remove("expanded");
+      }
 
+      button.textContent = expanded ? "Show Less" : "Read More";
+      button.style.display = "inline-block";
     } else {
-      // Large screen: show all, hide button
-      for (let i = 0; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "block";
-      }
-      if (button) {
-        button.style.display = "none";
-      }
+      // Desktop view: hide button, remove class but do NOT reset expanded to false
+      button.style.display = "none";
+      textSide.classList.remove("expanded");
     }
   }
 
-  updateVisibility(); // Run once on load
-  window.addEventListener("resize", updateVisibility); // Update on resize
+  updateVisibility();
+
+  window.addEventListener("resize", updateVisibility);
+
+  // Ignore scroll event or prevent toggling expanded on scroll
+  window.addEventListener("scroll", () => {
+  });
 }
 
 // ===================================================
