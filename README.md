@@ -1,6 +1,19 @@
+![version](https://img.shields.io/badge/version-v1.2.0-blue)
+
 # My Portfolio
 
 #### Video Demo: <URL HERE>
+
+## 📌 Version History
+
+### v1.0.1 – August 11, 2025
+
+- Fixed the scaling bug
+- updated resume
+
+### v1.0.0 – August 8, 2025
+
+- First deployment for my final project in CS50
 
 ## Description
 

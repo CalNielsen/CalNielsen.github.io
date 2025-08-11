@@ -27,10 +27,11 @@ body {
 
 main {
   flex: 1 0 auto;
-  margin-top: 100px;
+  margin-top: 107px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+  /* 992 * 0.75 */
   main {
     margin-top: 200px;
   }
@@ -40,12 +41,12 @@ main {
    Header & Navigation
 ================================= */
 header {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   background-color: #1c352d;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -65,7 +66,7 @@ header.transparent {
 
 header.scrolled {
   background-color: rgba(0, 0, 0, 0.85);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5px 6px rgba(0, 0, 0, 0.2);
 }
 
 header .nav-link {
@@ -73,11 +74,11 @@ header .nav-link {
 }
 
 header img {
-  margin-right: 0px; // 🔍 Could be removed if default
+  margin-right: 0px;
 }
 
 header .btn {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
 }
 
 header a.nav-link,
@@ -95,7 +96,7 @@ header button {
 ================================= */
 h1 {
   text-align: center;
-  font-size: 6rem;
+  font-size: 4.5rem;
   background-color: transparent;
 }
 
@@ -104,7 +105,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .h1-wrapper h1 {
@@ -118,7 +119,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
-  width: 1100px;
+  width: 700px;
   z-index: 0;
   pointer-events: none;
   opacity: 0.8;
@@ -132,9 +133,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  // 🔍 'justify-content' and 'align-items' are duplicated
 }
 
 .index-body {
@@ -152,7 +152,7 @@ h1 {
 }
 
 .index-body p {
-  margin-top: -1.5rem;
+  margin-top: -1.125rem;
   position: relative;
   z-index: 1;
   background-color: transparent;
@@ -164,30 +164,30 @@ h1 {
 .web-p {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem auto;
-  padding: 1rem;
+  gap: 1.5rem;
+  margin: 1.5rem auto;
+  padding: 0.75rem;
   align-items: center;
   box-sizing: border-box;
   background-color: #142620;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7.5px 18.75px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 1750px) {
+@media (max-width: 1312px) {
   .web-p {
     flex-direction: column;
   }
 }
 
 .text-side {
-  flex: 1 1 50%;
-  min-width: 280px;
+  flex: 1 1 37.5%;
+  min-width: 210px;
   background-color: #142620;
 }
 
 .text-side p {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   background-color: #142620;
 }
 
@@ -196,8 +196,8 @@ h1 {
 }
 
 .image-side {
-  flex: 1 1 40%;
-  min-width: 220px;
+  flex: 1 1 30%;
+  min-width: 165px;
   text-align: center;
   background-color: #142620;
 }
@@ -205,7 +205,7 @@ h1 {
 .image-side img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 /* ================================
@@ -213,17 +213,18 @@ h1 {
 ================================= */
 .my-projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+  gap: 1.5rem;
   justify-items: center;
-  padding: 2rem;
-  max-width: 2500px;
+  padding: 1.5rem;
+  max-width: 1875px;
   margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
+  /* 1200 * 0.75 */
   .my-projects {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   }
 }
 
@@ -240,17 +241,17 @@ h1 {
 
 .project-title {
   position: absolute;
-  top: 15%;
+  top: 11.25%;
   left: 0;
   width: 100%;
-  padding: 0.6rem 0;
+  padding: 0.45rem 0;
   background-color: rgba(0, 0, 0, 0.75);
   color: #ffc107;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: bold;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
   pointer-events: none;
   user-select: none;
   box-sizing: border-box;
@@ -260,8 +261,8 @@ h1 {
   width: 100%;
   aspect-ratio: 2 / 1;
   object-fit: cover;
-  border-radius: 8px;
-  border: 5px solid #f9f6f3;
+  border-radius: 6px;
+  border: 3.75px solid #f9f6f3;
 }
 
 .site-project:hover {
@@ -270,14 +271,14 @@ h1 {
 
 .site-project a {
   position: relative;
-  top: -15px;
+  top: -11.25px;
   display: inline-block;
-  padding: 0.6rem 2rem;
+  padding: 0.45rem 1.5rem;
   background-color: #ffc107;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 /* ================================
@@ -287,17 +288,17 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .custom-tech-table table {
   background-color: #1e1e1e;
   color: #f9f6f3;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   border-collapse: collapse;
-  max-width: 1200px;
+  max-width: 900px;
   width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .custom-tech-table th,
@@ -305,54 +306,54 @@ h1 {
   background-color: #142620;
   color: #f9f6f3;
   border: 1px solid #333;
-  padding: 1rem;
+  padding: 0.75rem;
   text-align: left;
   white-space: normal;
 }
 
 .custom-tech-table thead th {
   background-color: #1e1e1e;
-  font-size: 1.7rem;
-  border-bottom: 2px solid #555;
+  font-size: 1.275rem;
+  border-bottom: 1.5px solid #555;
 }
 
 /* ================================
    Contact Form
 ================================= */
 #contact-form {
-  max-width: 750px;
-  margin: 5rem auto;
-  padding: 2rem;
+  max-width: 562.5px;
+  margin: 3.75rem auto;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
   background-color: #142620;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 #contact-form input,
 #contact-form textarea {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.6rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1.5rem;
+  border-radius: 3.75px;
+  font-size: 1.125rem;
   box-sizing: border-box;
 }
 
 #contact-form textarea {
-  min-height: 150px;
+  min-height: 112.5px;
   resize: vertical;
 }
 
 #contact-form button {
-  padding: 0.8rem;
+  padding: 0.6rem;
   background-color: #ffc107;
   color: black;
   border: none;
-  border-radius: 5px;
-  font-size: 1.5rem;
+  border-radius: 3.75px;
+  font-size: 1.125rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -363,7 +364,7 @@ h1 {
 
 #form-status {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   font-style: italic;
 }
 
@@ -373,17 +374,17 @@ h1 {
 main p {
   margin: 0px;
   text-align: center;
-  font-size: 1.8rem;
-  padding-top: 10px;
-  width: 50vw;
+  font-size: 1.35rem;
+  padding-top: 7.5px;
+  width: 37.5vw;
   margin: 0 auto;
 }
 
 h2 {
   text-align: center;
-  font-size: 4rem;
-  padding: 20px;
-  padding-top: 40px;
+  font-size: 3rem;
+  padding: 15px;
+  padding-top: 30px;
 }
 
 h3 {
@@ -395,18 +396,20 @@ h3 {
 ================================= */
 footer {
   flex-shrink: 0;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 0.75rem;
+  gap: 0.75rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
 }
 
 footer .socials a {
-  font-size: 4rem;
+  position: relative;
+  font-size: 3rem;
   text-decoration: none;
   outline: none;
   box-shadow: none;
   transition: color 0.3s ease;
+  z-index: 2;
 }
 
 footer .socials a:hover .fa-linkedin {
@@ -420,13 +423,14 @@ footer .socials a:hover .fa-github {
 /* ================================
    Responsive Styles
 ================================= */
-@media (max-width: 768px) {
+@media (max-width: 622px) {
+  /* 768 * 0.75 */
   .nav-btns {
     text-align: center;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.875rem;
     text-align: center;
   }
 
@@ -435,46 +439,48 @@ footer .socials a:hover .fa-github {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .h1-bg {
-    top: -50px;
+    top: -105.5px;
     transform: translateX(-50%);
-    width: 500px;
+    width: 375px;
     max-width: 100vw;
     opacity: 0.4;
   }
 
   .index-wrapper {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 540px);
-    min-height: 30vh;
+    height: calc(100vh - 425px);
+    min-height: 22.5vh;
   }
 
   .index-body {
-    height: 500px;
+    display: grid;
+    height: 375px;
+    flex: 0;
   }
 
   .index-body p,
   .text-side p {
-    font-size: 1.2rem;
-    width: 90vw;
-    margin: 1rem auto;
+    font-size: 0.9rem;
+    width: 67.5vw;
+    margin: 0.75rem auto;
     line-height: 1.5;
   }
 
   main {
-    margin-top: 300px;
+    margin-top: 225px;
     overflow-y: hidden;
   }
 
   .index main {
-    margin-top: 350px;
+    margin-top: 262.5px;
   }
 
   /* Responsive Table */
@@ -493,10 +499,10 @@ footer .socials a:hover .fa-github {
   }
 
   .custom-tech-table tbody tr {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.125rem;
     border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 0.75rem;
+    border-radius: 6px;
     background-color: #142620;
   }
 
@@ -506,11 +512,11 @@ footer .socials a:hover .fa-github {
 
   .custom-tech-table tbody td {
     position: relative;
-    padding-left: 50%;
+    padding-left: 37.5%;
     text-align: left;
     white-space: normal;
     border: none;
-    border-bottom: 1px solid #444;
+    border-bottom: 0.75px solid #444;
   }
 
   .custom-tech-table tbody td:last-child {
@@ -520,18 +526,18 @@ footer .socials a:hover .fa-github {
   .custom-tech-table tbody td::before {
     content: attr(data-label);
     position: absolute;
-    left: 1rem;
-    top: 1rem;
+    left: 0.75rem;
+    top: 0.75rem;
     font-weight: bold;
     color: #ffc107;
     white-space: nowrap;
   }
 
   #contact-form {
-    margin: 32px;
+    margin: 24px;
   }
 
   footer {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 }
