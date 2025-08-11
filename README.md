@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-v1.2.0-blue)
+![version](https://img.shields.io/badge/version-v1.0.1-blue)
 
 # My Portfolio
 
@@ -6,7 +6,7 @@
 
 ## 📌 Version History
 
-### v1.0.1 – August 11, 2025
+### v1.0.1 – August 11, 2025 (current)
 
 - Fixed the scaling bug
 - updated resume
