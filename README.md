@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-v1.0.3-blue)
+![version](https://img.shields.io/badge/version-v1.1.3-blue)
 
 # My Portfolio
 
@@ -6,7 +6,11 @@
 
 ## 📌 Version History
 
-### v1.0.3 – August 11, 2025 (current)
+### v1.1.3 – November 16, 2025 (current)
+
+- added realfreshprints.com
+
+### v1.0.3 – August 11, 2025
 
 - mobile 'Read More' button fixed
 
